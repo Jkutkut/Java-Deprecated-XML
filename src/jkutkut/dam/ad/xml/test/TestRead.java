@@ -19,7 +19,7 @@ public class TestRead {
             docBuilder = dbf.newDocumentBuilder();
             Document document = docBuilder.parse(FILENAME);
 
-            ReadXML.printXML(document.getFirstChild(), 0);
+            ReadXML.printXML(document);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
             return;

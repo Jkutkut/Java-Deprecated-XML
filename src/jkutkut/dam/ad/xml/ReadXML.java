@@ -12,6 +12,19 @@ import java.util.ArrayList;
  */
 public class ReadXML {
     /**
+     * Arraylist with the tabs stored in heap.
+     */
+    private static ArrayList<String> tabs = null;
+
+    /**
+     * Prints the XML file in a human-readable format on the standard output.
+     * @param doc Document to print.
+     */
+    public static void printXML(Document doc) {
+        printXML(doc.getFirstChild(), 0);
+    }
+
+    /**
      * Prints the given node on the standard output.
      * @param node Node to print.
      * @param lvl Level of indentation (0 is no indentation).
@@ -20,30 +33,21 @@ public class ReadXML {
         printXML(String.format("<%s>", node.getNodeName()), lvl);
         NodeList children = node.getChildNodes();
         Node child;
-        String content;
         for (int i = 0; i < children.getLength(); i++) {
             child = children.item(i);
-            if (child.getNodeType() == Node.TEXT_NODE) {
-                content = child.getTextContent().trim();
-                if (!content.isEmpty())
-                    printXML(
-                        content,
-                        lvl + 1
-                    );
-            }
-            else if (child.getNodeType() == Node.ELEMENT_NODE) {
+            if (child.getNodeType() == Node.TEXT_NODE)
+                printXML(child.getNodeValue(), lvl + 1);
+            else if (child.getNodeType() == Node.ELEMENT_NODE)
                 printXML(child, lvl + 1);
-            }
         }
         printXML(String.format("</%s>", node.getNodeName()), lvl);
     }
 
     private static void printXML(String content, int lvl) {
-        System.out.printf("%s%s\n", getTabs(lvl), content);
+        content = content.trim();
+        if (!content.isEmpty())
+            System.out.printf("%s%s\n", getTabs(lvl), content);
     }
-
-    // TABS
-    private static ArrayList<String> tabs = null;
 
     /**
      * Returns a string with the given number of tabs.
@@ -52,7 +56,7 @@ public class ReadXML {
      */
     private static String getTabs(int lvl) {
         if (tabs == null) {
-            tabs = new ArrayList<String>();
+            tabs = new ArrayList<>();
             tabs.add("");
         }
         if (lvl >= tabs.size())
