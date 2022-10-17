@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alumnos.xml>
+    <alumno>
+        <nombre>Sara</nombre>
+        <edad>22</edad>
+    </alumno>
+    <alumno>
+        <nombre>Juan</nombre>
+        <edad>21</edad>
+    </alumno>
+</alumnos.xml>
