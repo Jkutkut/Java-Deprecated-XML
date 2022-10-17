@@ -20,8 +20,46 @@ public class ReadXML {
      * Prints the XML file in a human-readable format on the standard output.
      * @param doc Document to print.
      */
-    public static void printXML(Document doc) {
-        printXML(doc.getFirstChild(), 0);
+    public static void printDocumentXML(Document doc) {
+        printDocumentXML(doc, true);
+    }
+
+    /**
+     * Prints the XML file in a human-readable format on the standard output.
+     * @param doc Document to print.
+     * @param compact If true, the output will be compacted.
+     */
+    public static void printDocumentXML(Document doc, boolean compact) {
+        printXML(doc.getFirstChild(), 0, compact);
+    }
+
+    /**
+     * Prints the given node on the standard output.
+     * @param node Node to print.
+     * @param lvl Level of indentation (0 is no indentation).
+     * @param compact If true, the output will be compact.
+     *
+     */
+    public static void printXML(Node node, int lvl, boolean compact) {
+        NodeList children = node.getChildNodes();
+        Node child;
+        if (compact && children.getLength() == 1) {
+            String content = children.item(0).getNodeValue().trim();
+            printXML(String.format(
+                    "<%s>%s</%s>",
+                    node.getNodeName(), content, node.getNodeName()
+            ), lvl);
+            return;
+        }
+        printXML(String.format("<%s>", node.getNodeName()), lvl);
+        for (int i = 0; i < children.getLength(); i++) {
+            child = children.item(i);
+            if (child.getNodeType() == Node.TEXT_NODE)
+                printXML(child.getNodeValue(), lvl + 1);
+            else if (child.getNodeType() == Node.ELEMENT_NODE)
+                printXML(child, lvl + 1, compact);
+        }
+        printXML(String.format("</%s>", node.getNodeName()), lvl);
     }
 
     /**
@@ -30,17 +68,7 @@ public class ReadXML {
      * @param lvl Level of indentation (0 is no indentation).
      */
     public static void printXML(Node node, int lvl) {
-        printXML(String.format("<%s>", node.getNodeName()), lvl);
-        NodeList children = node.getChildNodes();
-        Node child;
-        for (int i = 0; i < children.getLength(); i++) {
-            child = children.item(i);
-            if (child.getNodeType() == Node.TEXT_NODE)
-                printXML(child.getNodeValue(), lvl + 1);
-            else if (child.getNodeType() == Node.ELEMENT_NODE)
-                printXML(child, lvl + 1);
-        }
-        printXML(String.format("</%s>", node.getNodeName()), lvl);
+        printXML(node, lvl, false);
     }
 
     private static void printXML(String content, int lvl) {
