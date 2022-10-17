@@ -14,6 +14,9 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
+/**
+ * TODO
+ */
 public class GenerateXML {
 	private static final String FILENAME = "res/jkutkut/dam/ad/xml/alumnos.xml";
 
