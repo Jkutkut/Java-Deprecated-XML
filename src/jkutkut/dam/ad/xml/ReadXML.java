@@ -87,9 +87,8 @@ public class ReadXML {
             tabs = new ArrayList<>();
             tabs.add("");
         }
-        if (lvl >= tabs.size())
-            while (lvl >= tabs.size())
-                tabs.add(tabs.get(tabs.size() - 1) + "  ");
+        while (lvl >= tabs.size())
+            tabs.add(tabs.get(tabs.size() - 1) + "  ");
         return tabs.get(lvl);
     }
 }
