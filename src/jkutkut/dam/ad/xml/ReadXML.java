@@ -3,6 +3,12 @@ package jkutkut.dam.ad.xml;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -15,6 +21,23 @@ public class ReadXML {
      * Arraylist with the tabs stored in heap.
      */
     private static ArrayList<String> tabs = null;
+
+    public static void printDocumentXML(String xmlFilename) {
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder;
+        try {
+            docBuilder = dbf.newDocumentBuilder();
+            Document document = docBuilder.parse(xmlFilename);
+
+            ReadXML.printDocumentXML(document);
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * Prints the XML file in a human-readable format on the standard output.
