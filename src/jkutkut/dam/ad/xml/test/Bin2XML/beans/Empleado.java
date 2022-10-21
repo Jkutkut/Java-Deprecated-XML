@@ -3,12 +3,15 @@ package jkutkut.dam.ad.xml.test.Bin2XML.beans;
 import java.io.Serializable;
 
 public class Empleado implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     public static final String[] ATTRIBUTES = {"id", "nombre", "departamento", "salario"};
 
-    private int id;
-    private String nombre;
-    private int departamento;
-    private double salario;
+    private final int id;
+    private final String nombre;
+    private final int departamento;
+    private final double salario;
 
     public Empleado(int id, String nombre, int departamento, double salario) {
         this.id = id;
