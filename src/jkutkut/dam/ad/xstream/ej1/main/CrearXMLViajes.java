@@ -1,5 +1,6 @@
 package jkutkut.dam.ad.xstream.ej1.main;
 
+import com.thoughtworks.xstream.XStream;
 import jkutkut.dam.ad.xstream.ej1.javabean.Agencia;
 import jkutkut.dam.ad.xstream.ej1.javabean.Ciudad;
 import jkutkut.dam.ad.xstream.ej1.javabean.Viaje;
@@ -13,6 +14,8 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 public class CrearXMLViajes {
 
@@ -41,6 +44,7 @@ public class CrearXMLViajes {
     public static void main(String[] args) {
         Agencia agencia = loadAgencia();
         storeWithDom(agencia, FILENAME);
+        showWithXStream(FILENAME);
     }
 
     private static Agencia loadAgencia() {
@@ -125,5 +129,39 @@ public class CrearXMLViajes {
             e.printStackTrace();
         }
         System.out.println("XML stored in the file " + filename + " using DOM");
+    }
+
+    private static void showWithXStream(String filename) {
+        // TODO verify
+        System.out.println("Showing XML using XStream");
+        XStream xstream = new XStream();
+
+        xstream.addPermission(NoTypePermission.NONE);
+        xstream.addPermission(NullPermission.NULL);
+        xstream.addPermission(PrimitiveTypePermission.PRIMITIVES);
+
+        xstream.allowTypes(new Class[] {Agencia.class, Viaje.class, Ciudad.class});
+        xstream.allowTypesByWildcard(new String[] {
+            "jkutkut.dam.ad.xstream.ej1.javabean.**"
+        });
+
+        xstream.alias("agencia", Agencia.class);
+        xstream.alias("viaje", Viaje.class);
+        xstream.alias("ciudad", Ciudad.class);
+
+        xstream.addImplicitCollection(Agencia.class, "agencia");
+
+        try {
+            FileInputStream fis = new FileInputStream(filename);
+            Agencia agencia = (Agencia) xstream.fromXML(fis);
+            for (Viaje viaje : agencia.getViajes()) {
+                System.out.println(viaje);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        System.out.println("XML shown using XStream");
     }
 }
