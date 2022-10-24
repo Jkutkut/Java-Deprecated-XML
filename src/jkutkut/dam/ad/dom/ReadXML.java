@@ -1,4 +1,4 @@
-package jkutkut.dam.ad.xml;
+package jkutkut.dam.ad.dom;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

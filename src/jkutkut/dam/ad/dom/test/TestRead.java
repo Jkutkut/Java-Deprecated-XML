@@ -1,6 +1,6 @@
-package jkutkut.dam.ad.xml.test;
+package jkutkut.dam.ad.dom.test;
 
-import jkutkut.dam.ad.xml.ReadXML;
+import jkutkut.dam.ad.dom.ReadXML;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 

@@ -1,4 +1,4 @@
-package jkutkut.dam.ad.xml.test.Bin2XML.beans;
+package jkutkut.dam.ad.dom.test.Bin2XML.beans;
 
 import java.io.Serializable;
 

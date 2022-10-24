@@ -1,7 +1,7 @@
-package jkutkut.dam.ad.xml.test.Bin2XML;
+package jkutkut.dam.ad.dom.test.Bin2XML;
 
-import jkutkut.dam.ad.xml.ReadXML;
-import jkutkut.dam.ad.xml.test.Bin2XML.beans.Empleado;
+import jkutkut.dam.ad.dom.ReadXML;
+import jkutkut.dam.ad.dom.test.Bin2XML.beans.Empleado;
 import org.w3c.dom.*;
 
 import javax.xml.parsers.DocumentBuilder;
