@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<agencia>
+    <viaje>
+        <id>1234</id>
+        <nombre>Semana Santa en Rivera Maya</nombre>
+        <ciudad>
+            <codigo>MAD</codigo>
+            <nombreCiudad>Madrid</nombreCiudad>
+            <pais>España</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1235</id>
+        <nombre>Semana Santa en Barcelona</nombre>
+        <ciudad>
+            <codigo>BCN</codigo>
+            <nombreCiudad>Barcelona</nombreCiudad>
+            <pais>España</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1236</id>
+        <nombre>Semana Santa en Roma</nombre>
+        <ciudad>
+            <codigo>ROM</codigo>
+            <nombreCiudad>Roma</nombreCiudad>
+            <pais>Italia</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1237</id>
+        <nombre>Semana Santa en Lisboa</nombre>
+        <ciudad>
+            <codigo>LIS</codigo>
+            <nombreCiudad>Lisboa</nombreCiudad>
+            <pais>Portugal</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1238</id>
+        <nombre>Semana Santa en París</nombre>
+        <ciudad>
+            <codigo>PAR</codigo>
+            <nombreCiudad>París</nombreCiudad>
+            <pais>Francia</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1239</id>
+        <nombre>Semana Santa en Londres</nombre>
+        <ciudad>
+            <codigo>LON</codigo>
+            <nombreCiudad>Londres</nombreCiudad>
+            <pais>Reino Unido</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1240</id>
+        <nombre>Semana Santa en Nueva York</nombre>
+        <ciudad>
+            <codigo>NYC</codigo>
+            <nombreCiudad>Nueva York</nombreCiudad>
+            <pais>Estados Unidos</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1241</id>
+        <nombre>Semana Santa en San Francisco</nombre>
+        <ciudad>
+            <codigo>SFO</codigo>
+            <nombreCiudad>San Francisco</nombreCiudad>
+            <pais>Estados Unidos</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1242</id>
+        <nombre>Semana Santa en Los Ángeles</nombre>
+        <ciudad>
+            <codigo>LAX</codigo>
+            <nombreCiudad>Los Ángeles</nombreCiudad>
+            <pais>Estados Unidos</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1243</id>
+        <nombre>Semana Santa en Miami</nombre>
+        <ciudad>
+            <codigo>MIA</codigo>
+            <nombreCiudad>Miami</nombreCiudad>
+            <pais>Estados Unidos</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1244</id>
+        <nombre>Semana Santa en Las Vegas</nombre>
+        <ciudad>
+            <codigo>LAS</codigo>
+            <nombreCiudad>Las Vegas</nombreCiudad>
+            <pais>Estados Unidos</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1245</id>
+        <nombre>Semana Santa en Cancún</nombre>
+        <ciudad>
+            <codigo>CUN</codigo>
+            <nombreCiudad>Cancún</nombreCiudad>
+            <pais>México</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1246</id>
+        <nombre>Semana Santa en Acapulco</nombre>
+        <ciudad>
+            <codigo>ACA</codigo>
+            <nombreCiudad>Acapulco</nombreCiudad>
+            <pais>México</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1247</id>
+        <nombre>Semana Santa en Puerto Vallarta</nombre>
+        <ciudad>
+            <codigo>PVR</codigo>
+            <nombreCiudad>Puerto Vallarta</nombreCiudad>
+            <pais>México</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1248</id>
+        <nombre>Semana Santa en Cabo San Lucas</nombre>
+        <ciudad>
+            <codigo>SJD</codigo>
+            <nombreCiudad>Cabo San Lucas</nombreCiudad>
+            <pais>México</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1249</id>
+        <nombre>Semana Santa en Los Cabos</nombre>
+        <ciudad>
+            <codigo>SJD</codigo>
+            <nombreCiudad>Los Cabos</nombreCiudad>
+            <pais>México</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+    <viaje>
+        <id>1250</id>
+        <nombre>Semana Santa en Cancún</nombre>
+        <ciudad>
+            <codigo>CUN</codigo>
+            <nombreCiudad>Cancún</nombreCiudad>
+            <pais>México</pais>
+        </ciudad>
+        <dias>7</dias>
+        <precio>845.0</precio>
+    </viaje>
+</agencia>
