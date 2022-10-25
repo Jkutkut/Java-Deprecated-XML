@@ -1,6 +1,9 @@
 package jkutkut.dam.ad.xstream.ej1.main;
 
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.NoTypePermission;
+import com.thoughtworks.xstream.security.NullPermission;
+import com.thoughtworks.xstream.security.PrimitiveTypePermission;
 import jkutkut.dam.ad.xstream.ej1.javabean.Agencia;
 import jkutkut.dam.ad.xstream.ej1.javabean.Ciudad;
 import jkutkut.dam.ad.xstream.ej1.javabean.Viaje;
